@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div {
+    padding: 20px;
+}
+
+select {
+    width: 175px;
+}
+
+#name-label {
+    padding-right: 50px;
+    
+}
+
+#weapon-label {
+    padding-right: 105px;
+    
+}
+
+
+#power-label {
+    padding-right: 115px;
+    
+}
+
+#pet-label {
+    padding-right: 135px;
+    
+}

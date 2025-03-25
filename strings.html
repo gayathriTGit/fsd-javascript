@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Character Creator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Character Creator</h1>
     <form onsubmit="displayCharacter()" >
         <div>
-            <label for="character-name">Enter your character name:</label>
-            <input id="character-name" type="text" required/>            
+            <label id="name-label" for="character-name">Enter your character name:</label>
+            <input class="input-data" id="character-name" type="text" required/>            
         </div>
         <div>
-            <label for="weapons">Choose a Weapon:</label>
-            <select id="weapons">
+            <label id="weapon-label" for="weapons">Choose a Weapon:</label>
+            <select id="weapons" class="input-data">
                 
             </select>
         </div>
         <div>
-            <label for="powers">Choose a Weapon:</label>
-            <select id="powers">
+            <label id="power-label" for="powers">Choose a Power:</label>
+            <select id="powers" class="input-data">
                 
             </select>
         </div>
         <div>
-        <label for="pets">Choose a Pet:</label>
-        <select id="pets">
+        <label id="pet-label" for="pets">Choose a Pet:</label>
+        <select id="pets" class="input-data">
             
         </select>
         </div>
@@ -78,7 +79,7 @@
         let pet = petOptions.options[petOptions.selectedIndex].text;
 
         let textContent = `${name.value} is a brave hero with the power of ${power}, a trusty ${weapon}, and a loyal ${pet} by their side.`
-        console.log(textContent);
+        alert(textContent);
     }        
 
     </script>
