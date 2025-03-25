@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Character Creator</title>
+</head>
+<body>
+    <h1>Character Creator</h1>
+    <form onsubmit="displayCharacter()" >
+        <div>
+            <label for="character-name">Enter your character name:</label>
+            <input id="character-name" type="text" required/>            
+        </div>
+        <div>
+            <label for="weapons">Choose a Weapon:</label>
+            <select id="weapons">
+                
+            </select>
+        </div>
+        <div>
+            <label for="powers">Choose a Weapon:</label>
+            <select id="powers">
+                
+            </select>
+        </div>
+        <div>
+        <label for="pets">Choose a Pet:</label>
+        <select id="pets">
+            
+        </select>
+        </div>
+        <div>
+            <input type="submit" id="butCreate" value="Create"/>
+        </div>
+    </form>
+    <script>
+        const weapons = ['Master Sword', 'Energy Sword', 'Key Blade', 'Lancer', 'Portal gun'];
+        const powers = ['Super Mushroom', 'Fire Flower', 'Morph Ball', 'Bottled Fairy', 'Power Pellets'];
+        const pets = ['Palicos', 'Rammy', 'Mojie', 'Munchie'];
+        
+        let selectWeapons = document.getElementById("weapons");
+        for (let indWeapons=0; indWeapons< weapons.length; indWeapons++)
+        {
+            let ele = document.createElement("option");
+            ele.textContent = weapons[indWeapons];
+            ele.value = weapons[indWeapons];
+            selectWeapons.appendChild(ele);
+        }
+
+        let selectPowers = document.getElementById("powers");
+        for (let indPowers=0; indPowers< powers.length; indPowers++)
+        {
+            let ele = document.createElement("option");
+            ele.textContent = powers[indPowers];
+            ele.value = powers[indPowers];
+            selectPowers.appendChild(ele);
+        }
+
+        let selectPets = document.getElementById("pets");
+        for (let indPets=0; indPets< pets.length; indPets++)
+        {
+            let ele = document.createElement("option");
+            ele.textContent = pets[indPets];
+            ele.value = pets[indPets];
+            selectPets.appendChild(ele);
+        }
+
+    function displayCharacter() {
+        let para = document.getElementById("describe-character");
+        let name = document.getElementById("character-name");
+        let powerOptions = document.getElementById("powers");
+        let power = powerOptions.options[powerOptions.selectedIndex].text
+        let weaponOptions = document.getElementById("weapons");
+        let weapon = weaponOptions.options[weaponOptions.selectedIndex].text
+        let petOptions = document.getElementById("pets");
+        let pet = petOptions.options[petOptions.selectedIndex].text;
+
+        let textContent = `${name.value} is a brave hero with the power of ${power}, a trusty ${weapon}, and a loyal ${pet} by their side.`
+        console.log(textContent);
+    }        
+
+    </script>
+</body>
+</html>

@@ -41,5 +41,9 @@ let Soledad = {
     };
 
     Soledad.lastName = "Chang";
-console.log(`${Soledad.firstName} ${Soledad.middleName} ${Soledad.lastName}`);
-console.log(Soledad);
+    console.log(`${Soledad.firstName} ${Soledad.middleName} ${Soledad.lastName} is a student is ${Soledad.isStudent}`);
+    //console.log(Soledad);
+    Soledad.favoriteColors.push('orange');
+    console.log(Soledad.favoriteColors);
+
+
